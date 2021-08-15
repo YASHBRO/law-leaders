@@ -16,6 +16,7 @@ function signOut() {
 function isSignedIn() {
   var auth2 = gapi.auth2.getAuthInstance();
   console.log(auth2.isSignedIn.get());
+  return auth2.isSignedIn.get();
 }
 
 function onSuccess(googleUser) {
@@ -34,4 +35,16 @@ function renderButton() {
     onsuccess: onSuccess,
     onfailure: onFailure,
   });
+}
+
+function checkLogin(route) {
+  gapi.load("auth2", function () {
+    gapi.auth2.init();
+  });
+  let check = isSignedIn();
+  if (check == true) {
+    window.location.href = route;
+  } else {
+    window.location.href = "/signIn";
+  }
 }

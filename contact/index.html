@@ -27,34 +27,60 @@
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
             <li><a href="/">ABOUT US</a></li>
-            <li><a href="/skills/">FINANCIAL AID</a></li>
-            <li><a href="/#environment">HIRE</a></li>
-            <li><a href="/#facilities">KNOW IT YOURSELF</a></li>
-            <li><a href="/#testimonials">TESTIMONIALS</a></li>
-            <li><a href="/#contact">CONTACT US</a></li>
-            <li class="sign-in-header btn">
-              <a href="#">SIGN IN</a>
+            <li>
+              <a onclick="checkLogin('/skills/')" style="cursor: pointer"
+                >FINANCIAL AID</a
+              >
             </li>
+            <li>
+              <a onclick="checkLogin('/enviroment/')" style="cursor: pointer"
+                >HIRE</a
+              >
+            </li>
+            <li><a href="/facilities/">KNOW IT YOURSELF</a></li>
+            <li><a href="/testimonial/">TESTIMONIALS</a></li>
+            <li><a href="/contact/">CONTACT US</a></li>
+            <li class="sign-in-header btn"><a href="./signIn/">SIGN IN</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
+      <!--JavaScript for toggle menu-->
+      <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+      </script>
     </section>
 
     <!--Comment section-->
-  <div id="contact"></div>
-
-  <div class="wrapper">
-    <section class="contact">
-      <h2>SHARE YOUR THOUGHTS</h2>
-      <form name="contact" data-netlify="true" method="POST" data-netlify-recaptcha="true">
-        <input type="text" placeholder="Name" name="name">
-        <input type="text" placeholder="Email" name="email">
-        <textarea cols="30" rows="10" placeholder="Message" name="message"></textarea>
-        <div data-netlify-recaptcha="true"></div>
-        <input type="submit" value="Send">
-      </form>
-    </section>
-  </div>
+    <div id="contact"></div>
+    <div class="g-signin2" style="opacity: 0; height: 0px;"></div>
+    <div class="wrapper">
+      <section class="contact">
+        <h2>SHARE YOUR THOUGHTS</h2>
+        <form
+          name="contact"
+          data-netlify="true"
+          method="POST"
+          data-netlify-recaptcha="true"
+        >
+          <input type="text" placeholder="Name" name="name" />
+          <input type="text" placeholder="Email" name="email" />
+          <textarea
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <div data-netlify-recaptcha="true"></div>
+          <input type="submit" value="Send" />
+        </form>
+      </section>
+    </div>
   </body>
 </html>

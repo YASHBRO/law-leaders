@@ -27,24 +27,37 @@
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
             <li><a href="/">ABOUT US</a></li>
-            <li><a href="/skills/">FINANCIAL AID</a></li>
-            <li><a href="/#environment">HIRE</a></li>
-            <li><a href="/#facilities">KNOW IT YOURSELF</a></li>
-            <li><a href="/#testimonials">TESTIMONIALS</a></li>
-            <li><a href="/#contact">CONTACT US</a></li>
-            <li class="sign-in-header btn">
-              <a href="#">SIGN IN</a>
+            <li>
+              <a onclick="checkLogin('/skills/')" style="cursor: pointer"
+                >FINANCIAL AID</a
+              >
             </li>
+            <li>
+              <a onclick="checkLogin('/enviroment/')" style="cursor: pointer"
+                >HIRE</a
+              >
+            </li>
+            <li><a href="/facilities/">KNOW IT YOURSELF</a></li>
+            <li><a href="/testimonial/">TESTIMONIALS</a></li>
+            <li><a href="/contact/">CONTACT US</a></li>
+            <li class="sign-in-header btn"><a href="./signIn/">SIGN IN</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
-
+      <!--JavaScript for toggle menu-->
+      <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+      </script>
       <div class="sign-in">
         <form class="sign-in-form">
           <h1>Sign in here</h1>
-
-          <!-- <div class="my-signin2 center-sign-in" data-onsuccess="onSignIn"></div> -->
 
           <div id="my-signin2"></div>
 
@@ -56,7 +69,7 @@
 
           <a href="#" class="btn" onclick="signOut()">Sign out</a>
 
-          <a onclick="isSignedIn()">Signed in?</a>
+          <!-- <a onclick="isSignedIn()">Signed in?</a> -->
 
           <script type="text/javascript" src="/js/login.js"></script>
         </form>

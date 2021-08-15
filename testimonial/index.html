@@ -23,73 +23,99 @@
   <body>
     <section class="header">
       <nav>
-        <a href="/"><img src="/images/logo1.jpg" /></a>
+        <a href="/"><img src="/images/logo1.jpg"></a>
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
             <li><a href="/">ABOUT US</a></li>
-            <li><a href="/skills/">FINANCIAL AID</a></li>
-            <li><a href="/#environment">HIRE</a></li>
-            <li><a href="/#facilities">KNOW IT YOURSELF</a></li>
-            <li><a href="/#testimonials">TESTIMONIALS</a></li>
-            <li><a href="/#contact">CONTACT US</a></li>
-            <li class="sign-in-header btn">
-              <a href="#">SIGN IN</a>
-            </li>
+            <li><a onclick="checkLogin('/skills/')" style="cursor: pointer;">FINANCIAL AID</a></li>
+            <li><a onclick="checkLogin('/enviroment/')" style="cursor: pointer;">HIRE</a></li>
+            <li><a href="/facilities/">KNOW IT YOURSELF</a></li>
+            <li><a href="/testimonial/">TESTIMONIALS</a></li>
+            <li><a href="/contact/">CONTACT US</a></li>
+            <li class="sign-in-header btn"><a href="./signIn/">SIGN IN</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
+      <!--JavaScript for toggle menu-->
+      <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+      </script>
     </section>
-
+    <div class="g-signin2" style="opacity: 0; height: 0px;"></div>
     <!--testimonials-->
-  <div id="testimonials"></div>
+    <div id="testimonials"></div>
 
-  <div class="wrapper">
-    <section class="testimonials">
-      <h2>Testimonials</h2>
-      <div class="glider-contain">
-        <div class="glider">
-          <div class="testimonial">
-            <img src="/images/testimonial1.jpg" alt="Testimonial">
-            <h3>Sarojni Srivastav</h3>
-            <p>
-              Through this I got courage and strength to stand for myself,to get legal advice.
-            </p>
+    <div class="wrapper">
+      <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="glider-contain">
+          <div class="glider">
+            <div class="testimonial">
+              <img src="/images/testimonial1.jpg" alt="Testimonial" />
+              <h3>Sarojni Srivastav</h3>
+              <p>
+                Through this I got courage and strength to stand for myself,to
+                get legal advice.
+              </p>
+            </div>
+
+            <div class="testimonial">
+              <img src="/images/testimonial2.jpg" alt="Testimonial" />
+              <h3>Daisy Jackson</h3>
+              <p>
+                Through this I could get a life I never imagined now I work and
+                I am happy now.
+              </p>
+            </div>
+
+            <div class="testimonial">
+              <img src="/images/testimonial3.jpg" alt="Testimonial" />
+              <h3>Sarah</h3>
+              <p>
+                I always wished that I could have an ANGEl of my own, and this
+                website made me find one.
+              </p>
+            </div>
+
+            <div class="testimonial">
+              <img src="/images/testimonial4.jpg" alt="Testimonial" />
+              <h3>Nancy Beth</h3>
+              <p>
+                I was so depressed after everything that happened with me but
+                now I began my own startup.
+              </p>
+            </div>
           </div>
 
-          <div class="testimonial">
-            <img src="/images/testimonial2.jpg" alt="Testimonial">
-            <h3>Daisy Jackson</h3>
-            <p>
-              Through this I could get a life I never imagined now I work and I am happy now.
-            </p>
-          </div>
-
-          <div class="testimonial">
-            <img src="/images/testimonial3.jpg" alt="Testimonial">
-            <h3>Sarah</h3>
-            <p>
-              I always wished that I could have an ANGEl of my own, and this website made me find one.
-            </p>
-          </div>
-
-          <div class="testimonial">
-            <img src="/images/testimonial4.jpg" alt="Testimonial">
-            <h3>Nancy Beth</h3>
-            <p>
-              I was so depressed after everything that happened with me but now I began my own startup.
-            </p>
-          </div>
+          <div id="dots"></div>
+          <button class="glider-prev">
+            <i class="fas fa-chevron-circle-left"></i>
+          </button>
+          <button class="glider-next">
+            <i class="fas fa-chevron-circle-right"></i>
+          </button>
         </div>
+      </section>
+    </div>
 
-        <div id="dots"></div>
-        <button class="glider-prev"><i class="fas fa-chevron-circle-left"></i></button>
-        <button class="glider-next"><i class="fas fa-chevron-circle-right"></i></button>
-      </div>
-    </section>
-  </div>
-
-
+    <script src="/js/glider.min.js"></script>
+    <script>
+      new Glider(document.querySelector(".glider"), {
+        slidesToShow: 1,
+        dots: "#dots",
+        arrows: {
+          prev: ".glider-prev",
+          next: ".glider-next",
+        },
+      });
+    </script>
   </body>
 </html>

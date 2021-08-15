@@ -27,53 +27,77 @@
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
             <li><a href="/">ABOUT US</a></li>
-            <li><a href="/skills/">FINANCIAL AID</a></li>
-            <li><a href="/#environment">HIRE</a></li>
-            <li><a href="/#facilities">KNOW IT YOURSELF</a></li>
-            <li><a href="/#testimonials">TESTIMONIALS</a></li>
-            <li><a href="/#contact">CONTACT US</a></li>
-            <li class="sign-in-header btn">
-              <a href="#">SIGN IN</a>
+            <li>
+              <a onclick="checkLogin('/skills/')" style="cursor: pointer"
+                >FINANCIAL AID</a
+              >
             </li>
+            <li>
+              <a onclick="checkLogin('/enviroment/')" style="cursor: pointer"
+                >HIRE</a
+              >
+            </li>
+            <li><a href="/facilities/">KNOW IT YOURSELF</a></li>
+            <li><a href="/testimonial/">TESTIMONIALS</a></li>
+            <li><a href="/contact/">CONTACT US</a></li>
+            <li class="sign-in-header btn"><a href="./signIn/">SIGN IN</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
+      <!--JavaScript for toggle menu-->
+      <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+      </script>
     </section>
-
+    <div class="g-signin2" style="opacity: 0; height: 0px;"></div>
     <!--Skills-->
-  <div id="skills"></div>
-  <section class="skills">
-    <h1>WE for WomEn</h1>
-    <p>We believe that justice should be given to everyone.<br>
-      So here we are providing financial aid to the people
-      who can't afford to reach out to someone or can't get the courage to fight for themselves,in<br>
-      hope that everyone get the justice they are seeking.
-    </p>
-    <div class="row">
-      <div class="community-col">
-        <h3>EDUCATION</h3>
-        <p><b>An investment in knowledge pays the best interest.</b><br>
-          We have tie ups with many educational institutions who help our<br>
-          clients to become well educated and live a good life again.
-        </p>
+    <div id="skills"></div>
+    <section class="skills">
+      <h1>WE for WomEn</h1>
+      <p>
+        We believe that justice should be given to everyone.<br />
+        So here we are providing financial aid to the people who can't afford to
+        reach out to someone or can't get the courage to fight for
+        themselves,in<br />
+        hope that everyone get the justice they are seeking.
+      </p>
+      <div class="row">
+        <div class="community-col">
+          <h3>EDUCATION</h3>
+          <p>
+            <b>An investment in knowledge pays the best interest.</b><br />
+            We have tie ups with many educational institutions who help our<br />
+            clients to become well educated and live a good life again.
+          </p>
+        </div>
+        <div class="community-col">
+          <h3>SKILL ENHANCEMENT</h3>
+          <p>
+            We also provide a 3 to 6 month training so that women can enhance<br />
+            their skills in a particular field. After enhancing their skills
+            they<br />
+            can apply for jobs in the respective fields. We will helping them
+            till end.
+          </p>
+        </div>
+        <div class="community-col">
+          <h3>START-UPS</h3>
+          <p>
+            We have tie-ups with many start-ups. Based on their interest women
+            <br />
+            can join the start-ups. Also they can start their own business if
+            they<br />
+            want. They can associate with other startups to being with.
+          </p>
+        </div>
       </div>
-      <div class="community-col">
-        <h3>SKILL ENHANCEMENT</h3>
-        <p>We also provide a 3 to 6 month training so that women can enhance<br>
-          their skills in a particular field. After enhancing their skills they<br>
-          can apply for jobs in the respective fields. We will helping them till end.
-        </p>
-      </div>
-      <div class="community-col">
-        <h3>START-UPS</h3>
-        <p>We have tie-ups with many start-ups. Based on their interest women <br>
-          can join the start-ups. Also they can start their own business if they<br>
-          want. They can associate with other startups to being with.
-        </p>
-      </div>
-    </div>
-  </section>
-
+    </section>
   </body>
 </html>
