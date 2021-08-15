@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+
+    <link rel="stylesheet" href="/css/enviroment.css" />
+    <link rel="stylesheet" href="/css/login-style.css" />
+    <meta
+      name="google-signin-client_id"
+      content="1064459935857-9a3jcvpitjoh7coa0r0ehrs5ki5io4lh.apps.googleusercontent.com"
+    />
+    <script
+      src="https://apis.google.com/js/platform.js?onload=init"
+      async
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <section class="header">
+      <nav>
+        <a href="/"><img src="/images/logo1.jpg" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="/">ABOUT US</a></li>
+            <li><a href="/skills/">FINANCIAL AID</a></li>
+            <li><a href="/#environment">HIRE</a></li>
+            <li><a href="/#facilities">KNOW IT YOURSELF</a></li>
+            <li><a href="/#testimonials">TESTIMONIALS</a></li>
+            <li><a href="/#contact">CONTACT US</a></li>
+            <li class="sign-in-header btn">
+              <a href="#">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    </section>
+
+    <!--environment-->
+    <div id="environment"></div>
+    <section class="environment">
+      <h1>Cases We Seek</h1>
+      <p>
+        We are a community of lawyers who help women to get justice. In this<br />
+        victim blaming society, we try to make things more li<br />
+        meeting and mentoring.<br />
+        &emsp; We believe that education is for everyone and technology can help
+        women<br />
+        to show that they are also efficient and reliable.
+      </p>
+      <div class="row">
+        <div class="environment-col">
+          <img src="/images/dowry.jpg" />
+          <div class="layer">
+            <h3>DOWRY DEATHS</h3>
+          </div>
+        </div>
+        <div class="environment-col">
+          <img src="/images/femalefoeticide.jpg" />
+          <div class="layer">
+            <h3>FEMALE INFANTICIDE AND SEX-SELECTION ABORTION</h3>
+          </div>
+        </div>
+        <div class="environment-col">
+          <img src="/images/humantrafficking.jpg" />
+          <div class="layer">
+            <h3>HUMAN TRAFFICKING AND FORCED PROSTITUTION</h3>
+          </div>
+        </div>
+        <div class="environment-col">
+          <img src="/images/rape.webp" />
+          <div class="layer">
+            <h3>RAPE</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
