@@ -43,7 +43,7 @@ function checkLogin(route) {
   });
   let check = isSignedIn();
   if (check == true) {
-    window.location.href = route;
+    window.location.href = toString(route);
   } else {
     window.location.href = "/signIn";
   }
